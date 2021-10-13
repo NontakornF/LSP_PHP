@@ -38,31 +38,27 @@ $row = mysqli_fetch_array($result);
             <h2>Edit LicensePlates</h2>
     </div>
                     <form action="edit_lsp.php" method="post">
-                        <div class="input-group">
+                        <div class="from-group">
                             <label for="LicensePlates_id">LicensePlates_id</label>
-                            <input type="text"name="LicensePlates_id" value="<?php echo $row['LicensePlates_id']; ?>" readonly >
+                            <input type="text"name="LicensePlates_id" value="<?php echo $row['LicensePlates_id']; ?>" readonly class="form-control" >
                         </div>
-                        <div class="input-group">
+                        <div class="from-group">
                             <label for="LicensePlates">LicensePlates</label>
-                            <input type="text"name="LicensePlates" value="<?php echo $row['LicensePlates']; ?>" >
+                            <input type="text"name="LicensePlates" value="<?php echo $row['LicensePlates']; ?>"  class="form-control">
                         </div>
-                        <div class="input-group">
+                        <div class="from-group">
                             <label for="status">status</label>
-                            <input type="text"name="status" value="<?php echo $row['status']; ?>" readonly >
+                            <input type="text"name="status" value="<?php echo $row['status']; ?>" readonly class="form-control" >
                         </div>
-                        <div class="input-group">
-                            <label for="img_full">img_full</label>
-                            <br>
-                            <?php echo '<img style="width: 250px; height: 150px"src="data:image/jpeg;base64,'.base64_encode( $row['img_full'] ).'"/>' ;?>
+                        <div class="from-group mt-4">
+                        <?php echo '<img style="width: 250px; height: 150px"src="data:image/jpeg;base64,'.base64_encode( $row['img_full'] ).'"/>' ;?>
                         </div>
-                        <div class="input-group">
-                            <label for="img">img</label>
-                            <br>
-                            <?php echo '<img style="width: 250px; height: 90px"src="data:image/jpeg;base64,'.base64_encode( $row['img'] ).'"/>' ;?>
+                        <div class="from-group mt-4">
+                        <?php echo '<img style="width: 250px; height: 90px"src="data:image/jpeg;base64,'.base64_encode( $row['img'] ).'"/>' ;?>
                         </div>
-                        <div class="input-group">
+                        <div class="from-group mt-3">
                             <label for="time">time</label>
-                            <input type="text"name="time" value="<?php echo $row['time']; ?>" readonly >
+                            <input type="text"name="time" value="<?php echo $row['time']; ?>" readonly  class="form-control">
                         </div>
                         <br>
                         <button class="btn">  SAVE  </button>

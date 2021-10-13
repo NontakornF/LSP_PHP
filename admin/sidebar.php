@@ -65,6 +65,14 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="position.php" class="nav-link">
+            <i class="fas fa-crosshairs nav-icon"></i>
+              <p>Set position</p>
+            </a>
+          </li>
+
+
           
           <li class="nav-item mt-4">
             <a href="logout.php" class="nav-link">

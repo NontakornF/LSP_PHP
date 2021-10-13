@@ -7,13 +7,12 @@
       <li class="nav-item">
         <a class="nav-link <?php if ($menu == "index"){echo "active";} ?>"  href="index.php">  </a>
       </li>
-      
     </ul>
 
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-    
+
     </ul>
   </nav>
  <!--  http://fordev22.com/ -->
