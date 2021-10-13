@@ -1,8 +1,8 @@
 <?php 
-    // Create connection
+
     $connect = new mysqli('localhost', 'root', '', 'register_system');
 
-    // Check Connection
+//0000000000000000000000000000000000000000
 
     if ($connect->connect_error) {
         die("Something wrong.: " . $connect->connect_error);
@@ -56,7 +56,7 @@
                            <a href="ban.php?ID=<?php  echo  $row['user_id'] ;?>" class="btn btn-danger btn-sm" onclick="return confirm('ยืนยัน')">ระงับบัญชี</a> 
                        <?php  }  
                          else if($st == "N"){?>
-                          <a href="success.php?ID=<?php  echo  $row['user_id'] ;?>" class="btn btn-success btn-sm" onclick="return confirm('ยืนยัน')">ยืนยันเข้าระบบ</a>
+                          <a href="success.php?ID=<?php  echo  $row['user_id'] ;?>" class="btn btn-success btn-sm" onclick="return confirm('ยืนยัน')">ยืนยันเข้าระบบ</a><command>
                       <?php   } 
                       else if($st == "B"){?>
                         <a href="success.php?ID=<?php  echo  $row['user_id'] ;?>" class="btn btn-success btn-sm" onclick="return confirm('ยืนยัน')">ยืนยันเข้าระบบ</a>
