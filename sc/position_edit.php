@@ -4,13 +4,13 @@
         $user_id = $_POST['user_id'];
         $f_name =  $_POST['f_name'];
         $l_name = $_POST['l_name'];
-        $car_position = $_POST['car_position'];
+        $cp_id = $_POST['cp_id'];
     
 //update data
 
         $sql ="UPDATE user SET 
 
-        car_position= '$car_position'
+        cp_id= '$cp_id'
         
         WHERE user_id = $user_id
         

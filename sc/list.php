@@ -10,7 +10,7 @@
 
     $sql = "SELECT * FROM license_plates";
     $result = $connect->query($sql);
-
+$i=1;
 ?>
 <table id="example1" class="table table-bordered  table-hover table-striped">
   <thead>
@@ -27,7 +27,7 @@
     <tbody>
                 <?php while($row = $result->fetch_assoc()): ?>
                     <tr>
-                        <td><?php echo $row['LicensePlates_id']; ?></td>
+                        <td><?php echo $i++; ?></td>
                         <td><?php echo $row['LicensePlates'];?></td>
                         <td><?php echo $row['status']; ?></td>
                         <td><?php echo '<img style="width: 250px; height: 150px"src="data:image/jpeg;base64,'.base64_encode( $row['img_full'] ).'"/>' ;?></td>

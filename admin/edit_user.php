@@ -40,7 +40,7 @@
                       text: "Successfuly ",
                       type: "success"
                   }, function() {
-                  window.location = "index.php";
+                  window.location = "index_Security.php";
               });
               }, 100);
           </script>

@@ -7,6 +7,9 @@ $menu = "product"
 <?php include("header.php"); 
       include("condb.php");
     
+$sql="SELECT * FROM car_position";
+$result= mysqli_query($conn,$sql);
+
     ?>
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -29,23 +32,26 @@ $menu = "product"
     </div>
 
     <form action="position_edit.php" method="post">
-        <div class="input-group">
+        <div class="form-group">
             <label for="user_id">User_id</label>
-            <input type="text"name="user_id"value="<?php echo  $_SESSION['user_id']; ?>"readonly>
+            <input type="text"name="user_id"value="<?php echo  $_SESSION['user_id']; ?>"readonly class="form-control">
         </div>
-        <div class="input-group">
+        <div class="form-group">
             <label for="firstname">Firstname</label>
-            <input type="firstname"name="f_name"value="<?php echo  $_SESSION['f_name']; ?>"readonly>
+            <input type="firstname"name="f_name"value="<?php echo  $_SESSION['f_name']; ?>"readonly class="form-control">
         </div>
-        <div class="input-group">
+        <div class="form-group">
             <label for="lastname">Lastname</label>
-            <input type="lastname"name="l_name"value="<?php echo  $_SESSION['l_name']; ?>"readonly>
+            <input type="lastname"name="l_name"value="<?php echo  $_SESSION['l_name']; ?>"readonly class="form-control">
         </div>
-        <label for="Position">Position</label>
-        <SELECT NAME="car_position" class="form-control">
-            <option value="Door1(in)">Door1(in)</option>
-            <option value="Door1(out)">Door1(out)</option>
-        </SELECT>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="cp_id">
+        <?php  foreach($result  as $row44){ ?>
+            <option value="<?php echo $row44['cp_id']; ?>"><?php echo $row44['name']; ?></option>
+         <?php }?>
+            </select>
+        </div>
         <div class="input-group">
             <button class="btn btn-flat btn-success col-3">ENTER</button>
         </div>
