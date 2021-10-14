@@ -37,6 +37,7 @@
             <input type="lastname"name="l_name">
         </div>
         <div class="input-group">
+            <input type="hidden" name="cp_id" value="1">
             <input type="hidden" name="status" id="" value="N">
             <input type="hidden" name="userGroup" value="Security">
             <button type="submit" name="reg_user" class="btn">Register</button>

@@ -12,6 +12,7 @@
         $l_name = mysqli_real_escape_string($conn, $_POST['l_name']);
         $userGroup = mysqli_real_escape_string($conn, $_POST['userGroup']);
         $status = mysqli_real_escape_string($conn, $_POST['status']);
+        $cp_id = mysqli_real_escape_string($conn, $_POST['cp_id']);
     
         if(empty($username)){
             array_push($errors,"Username is required");
@@ -41,7 +42,7 @@
         if(count($errors)== 0){
             $password = md5($password_1);
 
-            $sql ="INSERT INTO user (username, password,f_name, l_name, userGroup,status ) VALUES ('$username','$password_1','$f_name','$l_name','$userGroup','$status')";
+            $sql ="INSERT INTO user (username, password,f_name, l_name, userGroup,status,cp_id ) VALUES ('$username','$password_1','$f_name','$l_name','$userGroup','$status','$cp_id')";
             $result = mysqli_query($conn,$sql);
 
 
